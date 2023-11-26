@@ -12,14 +12,14 @@ public class Steps {
   private static Response response;
 
   @When("I query the API for a list of users")
-  public void queryListOfStudents() {
+  public void queryListOfUsers() {
     RestAssured.baseURI = BASE_URL;
     RequestSpecification request = RestAssured.given();
     response = request.get("/userlist");
   }
 
   @Then("Then a list of users is returned")
-  public void listOfStudentsReturned() {
+  public void listOfUsersReturned() {
     Assert.assertEquals(200, response.getStatusCode());
   }
 }

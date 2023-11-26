@@ -17,12 +17,12 @@ public class UserServiceTest {
   private UserService userServiceUnderTest;
 
   @BeforeEach
-  void freshInstanceForStudentService() {
+  void freshInstanceForUserService() {
     userServiceUnderTest = new UserService(userRepository);
   }
 
   @Test
-  void canGetAllStudents() {
+  void canGetAllUserss() {
     // when
     userServiceUnderTest.getAllUsers ();
     // then
